@@ -20,3 +20,6 @@ To do stuff:
         - Thursday - Meet during lab
         - Tuesday - 2577 DC, 4pm
         - Thursday - Meet during lab
+
+Useful Resources:
+    - Python Face Recognition Library: https://pypi.org/project/face-recognition/
