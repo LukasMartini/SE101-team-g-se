@@ -8,8 +8,10 @@ To do stuff:
         - Speaker (will come shortly)
 
 
-    - Stretch goals:
+    - Stretch goals/additional stuff:
         - A login page
+        - battery pack thing
+        - wireless screen on inside of door
 
     - Delegations for Nov 1 - Nov 8
         - Alakh - Notifications

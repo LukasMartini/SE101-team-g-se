@@ -3,3 +3,5 @@ __pycache__
 .env
 *.pyc
 *.so
+node_modules
+/output.avi
