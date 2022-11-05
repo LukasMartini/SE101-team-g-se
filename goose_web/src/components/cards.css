@@ -1,0 +1,16 @@
+.cardContainer {
+    display: inline-block; 
+    padding: 1rem; 
+    color: lightgray; 
+    border-radius: 3px; 
+    background: radial-gradient(939px at 94.7% 50%, rgb(0, 178, 169) 0%, rgb(0, 106, 101) 76.9%);
+    justify-items: center; align-items: center; 
+    width: 10rem; height: 10rem; 
+}
+
+.cardContainer:hover {
+    box-shadow: 0 0 0 2px white; 
+    border-width: medium; 
+    color: white; 
+    transition: 0.1s; 
+}

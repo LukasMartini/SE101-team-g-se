@@ -11,16 +11,19 @@ function wait(ms){
    }
  }
 
-function pop_up() {
-    console.log("clicked")
-    // document.getElementById("App").classList.toggle("fade")
-    document.getElementById("App").className = 'fade';
-    // setTimeout(() => removeTarget.remove(), 1000);
-    // wait(ms)
-    location.href="feed"
-}
+
 
 const Home = () => {
+    const navigate = useNavigate(); 
+    const  pop_up = () => {
+        console.log("clicked")
+        // document.getElementById("App").classList.toggle("fade")
+        document.getElementById("App").className = 'fade';
+        // setTimeout(() => removeTarget.remove(), 1000);
+        // wait(ms)
+    
+        setTimeout(() => { navigate('\Feed')}, 500);
+    }
     return (
         <>
             {/* <div id="particles-js"></div>   */}
