@@ -6,10 +6,11 @@ import { useNavigate } from 'react-router-dom';
 const Feed = () => {
     return (
         <>
-            <div style={{position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} >
+            <div>
                 <h1> Here are your feeds </h1> 
-                <Cards title = "Front Door"/> 
+                
             </div>
+            <Cards title = "Front Door" feedLink = "https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"/>   
         </>
     )
 }

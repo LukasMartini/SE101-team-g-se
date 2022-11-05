@@ -14,3 +14,24 @@
     color: white; 
     transition: 0.1s; 
 }
+
+.popup {
+    z-index:2000; 
+    top:0; left: 0; position:absolute; 
+    width:100vw; height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex; justify-content: center; align-items: center; 
+}  
+
+.popup-inner { 
+    display: flex; 
+    position:relative; 
+    padding:32px; width:75%; height:92%; 
+    background-color:black; 
+    border-radius:1.5vmin; border:0.15vw solid black; 
+    justify-content: center; align-items: center; 
+    background:black;  
+}
+.popup-inner .close-btn { 
+    position: absolute; right:16px; top: 16px; 
+}

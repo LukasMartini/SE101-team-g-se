@@ -1,14 +1,28 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import {React, useState} from 'react'
+import { useNavigate, } from 'react-router-dom';
 import './cards.css'
 
-function cards({title, img, feedLink, onClick}) {
-    // const navigate = useNavigate(); 
+function Popup(props) {
+	return (props.trigger) ? (
+		<div className='popup'> 
+			<div className='popup-inner'>
+				<button className='close-btn' onClick={() => props.setTrigger(false)}>x</button>
+				<iframe src = {props.children} style = {{height: "100%", width: "100%"}}/>
+			</div>
+		</div>
+	) : "";
+}
+
+function cards({title, img, feedLink}) {
+    const [showOverlay, setOverlay]  = useState(false); 
     return (
-        <div className = "cardContainer" onClick = {onClick}>
-            <h2 style = {{ fontWeight: '600' }}> {title} </h2>
-            <img src = "./logo.png" style = {{objectFit: 'contain', width: '5rem', height: '5rem', filter: 'invert(100%)'}}/> 
-        </div> 
+        <>
+            <Popup trigger={showOverlay} setTrigger={setOverlay} children = {feedLink}></Popup>
+            <div className = "cardContainer" onClick={()=> setOverlay(true)}>
+                <h2 style = {{ fontWeight: '600' }}> {title} </h2>
+                <img src = "./logo.png" style = {{objectFit: 'contain', width: '5rem', height: '5rem', filter: 'invert(100%)'}}/> 
+            </div> 
+        </>
     )
 }
 
