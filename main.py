@@ -1,10 +1,14 @@
 from flask import Flask
 from flask.wrappers import Response
 
-from frames import Camera
+from camera import Camera
+from face import FaceModel
+from motionDet import MotionModel
+
+models = [FaceModel,MotionModel]
 
 app = Flask(__name__)
-camera = Camera()
+camera = Camera(models)
 
 
 def main():
