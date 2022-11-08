@@ -26,8 +26,7 @@ class MotionModel(modelclass.ModelClass):
         for i, (new, old) in enumerate(zip(good_new, good_old)):  # flattens the array of points for both the new and old frames.
             a, b = new.ravel()
             c, d = old.ravel()
-            print(a, c)
-            if (abs(a - c) > 0.00001) and (abs(b - d) > 0.00001):  # checks to see if the difference between the old and new frame is great enough to constitute "movement"
+            if (abs(a - c) > 10) and (abs(b - d) > 10):  # checks to see if the difference between the old and new frame is great enough to constitute "movement"
                 moveStatus = 1
                 print(moveStatus)
 

@@ -14,11 +14,11 @@ class ModelClass:
     @classmethod
     def test(cls):
         video_capture = new_video_capture()
+        frame = capture_frame(video_capture)
+        model = cls(frame)
 
         while True:
             frame = capture_frame(video_capture)
-
-            model = cls(frame)
 
             model.process(frame)
 
