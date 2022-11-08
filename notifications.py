@@ -1,3 +1,5 @@
+from typing import Optional
+
 import httpx
 import numpy
 
@@ -11,7 +13,7 @@ client = httpx.Client()
 
 
 @limit(30)
-def send_notification(title: str, message: str, frame: numpy.ndarray | None = None):
+def send_notification(title: str, message: str, frame: Optional[numpy.ndarray] = None):
     print("Sending notification")
 
     if frame is not None:
