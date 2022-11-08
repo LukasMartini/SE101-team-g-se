@@ -1,10 +1,9 @@
 import cv2 as cv
-import numpy
 import numpy as np
 import modelclass
 # credit: https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html
 class MotionModel(modelclass.ModelClass):
-    def __init__(self, frame: numpy.ndarray): # Sets constants and presets used in every iteration as well as the original frame used as a basis.
+    def __init__(self, frame: np.ndarray): # Sets constants and presets used in every iteration as well as the original frame used as a basis.
         self.oldFrame = frame # Basis frame.
         self.ShiTomasiPresets = dict(maxCorners=100, qualityLevel=0.1, minDistance=7, blockSize=7) # Edge detection presets.
         self.LukasKanadePresets = dict(winSize=(5, 5), maxLevel=2, criteria=(cv.TERM_CRITERIA_EPS | cv.TERM_CRITERIA_COUNT, 10, 0.03)) # Optical flow presets
