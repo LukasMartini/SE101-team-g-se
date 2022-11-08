@@ -35,6 +35,9 @@ def motionDet(oldFrame, newFrame, oldPoint, lkPresets):
 class motionDet(frames.ModelClass):
     def __init__(self, frame: numpy.ndarray):
         oldFrame = frame
+        ShiTomasiPresets = dict(maxCorners=100, qualityLevel=0.1, minDistance=7, blockSize=7)
+        # Parameters for lucas kanade optical flow
+        LukasKanadePresets = dict(winSize=(5, 5), maxLevel=2, criteria=(cv.TERM_CRITERIA_EPS | cv.TERM_CRITERIA_COUNT, 10, 0.03))
 
     def motionDet(oldFrame, newFrame, oldPoint, lkPresets):
         moveStatus = 0  # a checker for if there is movement.
