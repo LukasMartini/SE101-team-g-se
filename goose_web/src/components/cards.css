@@ -1,6 +1,5 @@
 .cardContainer {
     display: inline-block; 
-    padding: 1rem; 
     color: lightgray; 
     border-radius: 3px; 
     background: radial-gradient(939px at 94.7% 50%, rgb(0, 178, 169) 0%, rgb(0, 106, 101) 76.9%);
