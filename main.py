@@ -3,8 +3,9 @@ from flask.wrappers import Response
 
 from camera import Camera
 from face import FaceModel
+from motionDet import MotionModel
 
-models = [FaceModel]
+models = [FaceModel,MotionModel]
 
 app = Flask(__name__)
 camera = Camera(models)
