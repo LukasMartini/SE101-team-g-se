@@ -6,6 +6,16 @@
   align-items:center;
 }
 
+#App.fade {
+  transition: 0.3s;
+  opacity: 0;
+}
+/* 
+#App.unfade {
+  transition: 0.3s;
+  opacity: 1;
+} */
+
 .logo {
   height: 6em;
   padding: 1.5em;
