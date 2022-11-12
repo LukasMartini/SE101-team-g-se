@@ -10,7 +10,7 @@ const Feed = () => {
                 <h1> Here are your feeds </h1> 
                 
             </div>
-            <Cards title = "Front Door" feedLink = "https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"/>   
+            <Cards title = "Front Door" feedLink = "http://127.0.0.1:8080"/>   
         </div>
     )
 }
