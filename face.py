@@ -4,6 +4,7 @@ import numpy
 import notifications
 from modelclass import ModelClass
 
+# Model from [OpenCV documentation](https://github.com/opencv/opencv)
 cascPath = "haarcascade_frontalface_default.xml"
 cascade = cv2.CascadeClassifier(cascPath)
 
