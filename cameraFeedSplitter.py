@@ -5,6 +5,7 @@ import modularMotionDet # May need to be done differently in the git itself
 # function that returns a given frame
 # have a main function that permanently runs the camera on it's own
 
+# credit: https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html NOTE: this is my code, but it borrows heavily from the ideas of the tutorial, hence the credit
 
 def permRunCam():
 

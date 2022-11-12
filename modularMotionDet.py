@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# credit: https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html NOTE: same thing as camera feed splitter.
+
 def detectMotion(oldFrame, newFrame, oldPoint, lkPresets):
     moveStatus = 0 #a checker for if there is movement.
     color = np.random.randint(0, 255, (100, 3)) # Pickes random colors. This is only for if there are things being drawn and should be deleted later.

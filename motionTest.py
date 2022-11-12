@@ -8,6 +8,9 @@ parser.add_argument('image', type=str, help='path to image file')
 args = parser.parse_args()
 "/Users/almostfishy/PycharmProjects/SE101-team-g-se/slow_traffic_small.mp4"
 """
+
+# credit: https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html This was ripped directly from the website for testing and debugging purposes. Will be deleted later
+
 cap = cv.VideoCapture(0)
 # params for ShiTomasi corner detection
 feature_params = dict( maxCorners = 100,
