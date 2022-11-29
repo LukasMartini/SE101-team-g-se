@@ -5,14 +5,14 @@ from camera import Camera
 from face import FaceModel
 from motionDet import MotionModel
 
-models = [FaceModel,MotionModel]
+models = [FaceModel, MotionModel]
 
 app = Flask(__name__)
 camera = Camera(models)
 
 
 def main():
-    app.run(port=8080)
+    app.run(host="0.0.0.0", port=8080)
 
 
 @app.route("/")
