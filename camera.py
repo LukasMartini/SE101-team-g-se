@@ -6,6 +6,7 @@ from multiprocessing.pool import ThreadPool
 
 import numpy
 
+import playSound
 from frames import capture_frame, encode_frame, new_video_capture
 
 ACTIVE_FRAME_RATE = 30
@@ -22,7 +23,7 @@ class Camera:
         self.last_access = time.time()
         self.video_capture = new_video_capture()
 
-        num_models = len(models)
+        num_models = len(models) + 2
         os_cores = os.cpu_count() or 1
 
         num_threads = min(os_cores, num_models)
@@ -31,6 +32,11 @@ class Camera:
         self.pool = ThreadPool(num_threads)
 
         threading.Thread(target=self._thread).start()
+
+        try:
+            self.pool.apply_async(playSound.playsound)
+        except AttributeError:
+            print("rip no button x2")
 
         print("Waiting for first frame...")
 
