@@ -1,6 +1,7 @@
 import {React, useState} from 'react'
 import { useNavigate, } from 'react-router-dom';
 import './cards.css'
+// credits: sophia
 
 function Popup(props) {
 	return (props.trigger) ? (

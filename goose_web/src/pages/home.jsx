@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <>
             {/* <div id="particles-js"></div>   */}
-            <div id="App" style={{height:'80vh', width:'80vw', paddingTop:'40vh'}} className="App" onClick={() => pop_up()}>
+            <div id="App" style={{height:'100vh', width:'100vw', paddingTop:'35vh'}} className="App" onClick={() => pop_up()}>
                 <div id='startDiv'>
                     <h1 id='startHeader1'>Welcome to SecureIT.</h1>
                     <h2 id='startHeader2'>Click anywhere to begin.</h2>

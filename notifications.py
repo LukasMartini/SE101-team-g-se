@@ -1,7 +1,9 @@
+from typing import Optional
+
 import httpx
 import numpy
 
-import frames
+from frames import encode_frame
 from limiter import limit
 
 PUSHOVER_TOKEN = "apacy68n1q58vv9mhe9h88yj35joef"
@@ -11,11 +13,11 @@ client = httpx.Client()
 
 
 @limit(30)
-def send_notification(title: str, message: str, frame: numpy.ndarray | None = None):
+def send_notification(title: str, message: str, frame: Optional[numpy.ndarray] = None):
     print("Sending notification")
 
     if frame is not None:
-        frame_bytes = frames.encode_frame(frame)
+        frame_bytes = encode_frame(frame)
         files = {"attachment": ("image.jpeg", frame_bytes, "image/jpeg")}
     else:
         files = {}

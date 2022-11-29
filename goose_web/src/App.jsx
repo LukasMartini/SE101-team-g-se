@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home'; 
 import Feed from './pages/feed'; 
 import './App.css'
-
+// credit to : react, vite, node,
 function App() {
   return (
     <Router>

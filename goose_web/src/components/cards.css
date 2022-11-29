@@ -1,6 +1,5 @@
 .cardContainer {
     display: inline-block; 
-    padding: 1rem; 
     color: lightgray; 
     border-radius: 3px; 
     background: radial-gradient(939px at 94.7% 50%, rgb(0, 178, 169) 0%, rgb(0, 106, 101) 76.9%);
@@ -29,9 +28,12 @@
     padding:32px; width:75%; height:92%; 
     background-color:black; 
     border-radius:1.5vmin; border:0.15vw solid black; 
+    object-fit: cover; 
     justify-content: center; align-items: center; 
     background:black;  
+    z-index: 1; 
 }
 .popup-inner .close-btn { 
     position: absolute; right:16px; top: 16px; 
+    z-index: 3;
 }
