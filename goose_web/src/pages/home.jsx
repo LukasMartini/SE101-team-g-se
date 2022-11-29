@@ -4,20 +4,11 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 //  import { setTimeout } from "timers/promises";
 
-function wait(ms){
-    var start = new Date().getTime();
-    var end = start;
-    while(end < start + ms) {
-      end = new Date().getTime();
-   }
- }
-
 
 
 const Home = () => {
     const navigate = useNavigate(); 
     const  pop_up = () => {
-        console.log("clicked")
         document.getElementById("App").className = 'fade';
         setTimeout(() => { navigate('\Feed')}, 500);
     }
