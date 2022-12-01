@@ -1,3 +1,4 @@
 httpx
 opencv-python
 flask
+pygame

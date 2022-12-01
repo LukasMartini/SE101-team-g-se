@@ -3,9 +3,8 @@
 
 try:
 
-    import RPi.GPIO as GPIO
     import pygame
-
+    import RPi.GPIO as GPIO
 
     # Import Raspberry Pi GPIO library
     GPIO.setwarnings(False)
@@ -21,7 +20,7 @@ try:
             pygame.mixer.init()
             pygame.mixer.music.load("doorbell.wav")
             pygame.mixer.music.play()
-            while pygame.mixer.music.get_busy() == True:
+            while pygame.mixer.music.get_busy() is True:
                 continue
 except ImportError:
     print("rip no button")

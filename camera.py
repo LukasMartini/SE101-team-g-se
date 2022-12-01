@@ -9,7 +9,7 @@ import numpy
 import playSound
 from frames import capture_frame, encode_frame, new_video_capture
 
-ACTIVE_FRAME_RATE = 30
+ACTIVE_FRAME_RATE = 60
 INACTIVE_FRAME_RATE = 1
 
 
@@ -63,7 +63,7 @@ class Camera:
         while True:
             self.last_access = time.time()
             if self.FRAME_RATE != ACTIVE_FRAME_RATE:
-                print(f"Accessed, entering active mode")
+                print("Accessed, entering active mode")
                 self.FRAME_RATE = ACTIVE_FRAME_RATE
 
             while self.last_gen == self.last_capture:
@@ -84,7 +84,7 @@ class Camera:
 
                 if time.time() - self.last_access > 10:
                     if self.FRAME_RATE != INACTIVE_FRAME_RATE:
-                        print(f"No access for 10s, entering inactive mode")
+                        print("No access for 10s, entering inactive mode")
                         self.FRAME_RATE = INACTIVE_FRAME_RATE
 
                 if len(self.pool._cache) == 0:  # type: ignore
