@@ -2,6 +2,7 @@
 # import required module
 
 import pygame
+import simpleaudio as sa
 
 import limiter
 
@@ -21,8 +22,6 @@ def playsound():
     GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
     # Set pin 10 to be an input pin and set initial value to be pulled low (off)
 
-    pygame.mixer.init()
-    pygame.mixer.music.load("doorbell.wav")
 
     while True:
         # Run forever
@@ -33,4 +32,6 @@ def playsound():
 
 @limiter.limit(1)
 def ps(_useless_but_required: int):
-    pygame.mixer.music.play()
+    wave_obj = sa.WaveObject.from_wave_file("doorbell.wav")
+    play_obj = wave_obj.play()
+    play_obj.wait_done()
