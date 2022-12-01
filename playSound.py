@@ -26,10 +26,10 @@ def playsound():
         # Run forever
         if GPIO.input(10) == GPIO.HIGH:
             print("Button was pushed!")  # for playing doorbell.wav file
-            notifications.send_notification(
-                "Someone is at the door!",
-                "check out the stream here\n http://se101.alakhpc.com:8080",
-            )
+            # notifications.send_notification(
+            #     "Someone is at the door!",
+            #     "check out the stream here\n http://se101.alakhpc.com:8080",
+            # )
             ps(1)
 
 
