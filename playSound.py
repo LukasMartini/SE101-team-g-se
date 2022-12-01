@@ -1,9 +1,11 @@
 # credit: https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
 # import required module
+
 try:
 
     import RPi.GPIO as GPIO
-    from playsound import playsound
+    import pygame
+
 
     # Import Raspberry Pi GPIO library
     GPIO.setwarnings(False)
@@ -16,6 +18,10 @@ try:
         # Run forever
         if GPIO.input(10) == GPIO.HIGH:
             print("Button was pushed!")  # for playing doorbell.wav file
-            playsound("doorbell.wav")
+            pygame.mixer.init()
+            pygame.mixer.music.load("doorbell.wav")
+            pygame.mixer.music.play()
+            while pygame.mixer.music.get_busy() == True:
+                continue
 except ImportError:
     print("rip no button")
