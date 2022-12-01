@@ -1,7 +1,6 @@
 # credit: https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
 # import required module
 
-import pygame
 import simpleaudio as sa
 
 import limiter
@@ -34,3 +33,7 @@ def ps(_useless_but_required: int):
     wave_obj = sa.WaveObject.from_wave_file("doorbell.wav")
     play_obj = wave_obj.play()
     play_obj.wait_done()
+
+
+if __name__ == "__main__":
+    playsound()
