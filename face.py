@@ -14,6 +14,7 @@ class FaceModel(ModelClass):
         pass
 
     def process(self, frame: numpy.ndarray):
+        print("EBFuehf")
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         faces = cascade.detectMultiScale(

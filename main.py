@@ -1,5 +1,10 @@
-from flask import Flask
+from io import BytesIO
+
+import playsound
+from flask import Flask, request
 from flask.wrappers import Response
+from flask_cors import CORS
+from pydub import AudioSegment
 
 from camera import Camera
 from face import FaceModel
@@ -8,6 +13,7 @@ from motionDet import MotionModel
 models = [FaceModel, MotionModel]
 
 app = Flask(__name__)
+CORS(app)
 camera = Camera(models)
 
 

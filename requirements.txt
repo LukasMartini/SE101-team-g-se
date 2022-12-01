@@ -1,4 +1,5 @@
 httpx
 opencv-python
 flask
+flask_cors
 pygame
