@@ -35,7 +35,7 @@ const loginPage = () => {
             ></input>
           </div>
           <button
-            type="submit"
+            type="password"
             onClick={() => pop_up()}
             style={{ margin: "1rem" }}
           >
