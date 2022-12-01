@@ -3,9 +3,10 @@
 
 try:
 
-    import pygame
     import RPi.GPIO as GPIO
+    import simpleaudio as sa
 
+    wave_obj = sa.WaveObject.from_wave_file("doorbell.wav")
     # Import Raspberry Pi GPIO library
     GPIO.setwarnings(False)
     # Ignore warning for now
@@ -17,10 +18,8 @@ try:
         # Run forever
         if GPIO.input(10) == GPIO.HIGH:
             print("Button was pushed!")  # for playing doorbell.wav file
-            pygame.mixer.init()
-            pygame.mixer.music.load("doorbell.wav")
-            pygame.mixer.music.play()
-            while pygame.mixer.music.get_busy() is True:
-                continue
+            play_obj = wave_obj.play()
+            play_obj.wait_done()
+
 except ImportError:
     print("rip no button")
