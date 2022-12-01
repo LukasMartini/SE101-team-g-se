@@ -29,13 +29,13 @@ const loginPage = () => {
               style={{ zIndex: "1" }}
             ></input>
             <input
-              type="text"
+              type="password"
               className="inputBox"
               placeholder="password"
             ></input>
           </div>
           <button
-            type="button"
+            type="submit"
             onClick={() => pop_up()}
             style={{ margin: "1rem" }}
           >
