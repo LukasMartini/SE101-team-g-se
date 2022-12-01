@@ -3,6 +3,8 @@
 
 import pygame
 
+import limiter
+
 
 def playsound():
     try:
@@ -19,12 +21,16 @@ def playsound():
     GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
     # Set pin 10 to be an input pin and set initial value to be pulled low (off)
 
+    pygame.mixer.init()
+    pygame.mixer.music.load("doorbell.wav")
+
     while True:
         # Run forever
         if GPIO.input(10) == GPIO.HIGH:
             print("Button was pushed!")  # for playing doorbell.wav file
-            pygame.mixer.init()
-            pygame.mixer.music.load("doorbell.wav")
-            pygame.mixer.music.play()
-            while pygame.mixer.music.get_busy() is True:
-                continue
+            ps(1)
+
+
+@limiter.limit(1)
+def ps(_useless: int):
+    pygame.mixer.music.play()
