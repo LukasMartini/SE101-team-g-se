@@ -32,5 +32,5 @@ def playsound():
 
 
 @limiter.limit(1)
-def ps(_useless: int):
+def ps(_useless_but_required: int):
     pygame.mixer.music.play()
